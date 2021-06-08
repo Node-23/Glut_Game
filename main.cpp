@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <GL/freeglut.h>
+#include <iostream>
 #include "Player.cpp"
 
 Player player;
@@ -69,6 +70,18 @@ void getKeyboard(unsigned char key, int x, int y)
 	{
 	case 27:
 		exit(0);
+		break;
+	case 'a':
+		if (player.getMoveX() > -85)
+		{
+			player.setMoveX(-5);
+		}
+		break;
+	case 'd':
+		if (player.getMoveX() < 85)
+		{
+			player.setMoveX(5);
+		}
 		break;
 	}
 	glutPostRedisplay();
