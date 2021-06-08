@@ -3,7 +3,7 @@
 #include <GL/gl.h>
 #include <GL/freeglut.h>
 #include <iostream>
-#include "Player.cpp"
+#include "Objects/Player.cpp"
 
 Player player;
 float R, G, B, A;
