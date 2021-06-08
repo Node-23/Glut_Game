@@ -1,5 +1,9 @@
 #include <GL/freeglut.h>
 
+#define PLAYER_R 0.0f
+#define PLAYER_G 0.5f
+#define PLAYER_B 1.0f
+
 class Player
 {
 private:
@@ -25,7 +29,7 @@ public:
     {
         glPushMatrix();
         glTranslatef(0, -80, 0);
-        glColor3f(0, 0, 1);
+        glColor3f(PLAYER_R, PLAYER_G, PLAYER_B);
         glBegin(GL_QUADS);
         glVertex2f(x1 + moveX, y1);
         glVertex2f(x2 + moveX, y2);
