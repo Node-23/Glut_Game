@@ -45,21 +45,31 @@ void draw()
 	glutSwapBuffers();
 }
 
+void moveLeft()
+{
+	if (player.getMoveX() > -85)
+	{
+		player.setMoveX(-5);
+	}
+}
+
+void moveRight()
+{
+	if (player.getMoveX() < 85)
+	{
+		player.setMoveX(5);
+	}
+}
+
 void movePlayer(int key, int x, int y)
 {
 	if (key == GLUT_KEY_LEFT)
 	{
-		if (player.getMoveX() > -85)
-		{
-			player.setMoveX(-5);
-		}
+		moveLeft();
 	}
 	if (key == GLUT_KEY_RIGHT)
 	{
-		if (player.getMoveX() < 85)
-		{
-			player.setMoveX(5);
-		}
+		moveRight();
 	}
 	glutPostRedisplay();
 }
@@ -72,16 +82,10 @@ void getKeyboard(unsigned char key, int x, int y)
 		exit(0);
 		break;
 	case 'a':
-		if (player.getMoveX() > -85)
-		{
-			player.setMoveX(-5);
-		}
+		moveLeft();
 		break;
 	case 'd':
-		if (player.getMoveX() < 85)
-		{
-			player.setMoveX(5);
-		}
+		moveRight();
 		break;
 	}
 	glutPostRedisplay();
