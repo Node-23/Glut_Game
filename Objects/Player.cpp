@@ -1,5 +1,9 @@
 #include <GL/freeglut.h>
 
+#define PLAYER_R 0.0f
+#define PLAYER_G 0.5f
+#define PLAYER_B 1.0f
+
 class Player
 {
 private:
@@ -12,20 +16,20 @@ public:
     {
         //If you change the value of X, dont forget to change it on the movePlayer function
         x1 = 15;
-        y1 = 3;
+        y1 = -10;
         x2 = 15;
-        y2 = -3;
+        y2 = -14;
         x3 = -15;
-        y3 = -3;
+        y3 = -14;
         x4 = -15;
-        y4 = 3;
+        y4 = -10;
     }
 
     void setPlayer()
     {
         glPushMatrix();
         glTranslatef(0, -80, 0);
-        glColor3f(0, 0, 1);
+        glColor3f(PLAYER_R, PLAYER_G, PLAYER_B);
         glBegin(GL_QUADS);
         glVertex2f(x1 + moveX, y1);
         glVertex2f(x2 + moveX, y2);
