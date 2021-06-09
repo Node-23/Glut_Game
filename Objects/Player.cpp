@@ -16,13 +16,13 @@ public:
     {
         //If you change the value of X, dont forget to change it on the movePlayer function
         x1 = 15;
-        y1 = 3;
+        y1 = -10;
         x2 = 15;
-        y2 = -3;
+        y2 = -14;
         x3 = -15;
-        y3 = -3;
+        y3 = -14;
         x4 = -15;
-        y4 = 3;
+        y4 = -10;
     }
 
     void setPlayer()

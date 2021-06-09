@@ -1,7 +1,7 @@
-
 #include <string.h>
 #include <GL/freeglut.h>
 #include "Objects/Player.cpp"
+#include "Objects/Scene.cpp"
 #include "Libraries/UI.h"
 
 #define BACKGROUND_R 0.1f
@@ -14,6 +14,7 @@
 #define TEXT_B 1.0f
 
 Player player;
+Scene scene;
 
 void init(void)
 {
@@ -60,11 +61,12 @@ void draw()
 	glOrtho(-100, 100, -100, 100, -1, 1);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+	scene.setScene();
 	player.setPlayer();
-	displayText(-90,90,TEXT_R,TEXT_G,TEXT_B,"Lifes:");
-	displayPoints(-65,90,TEXT_R,TEXT_G,TEXT_B,10);
-	displayText(-40,90,TEXT_R,TEXT_G,TEXT_B,"Score:");
-	displayPoints(-15,90,TEXT_R,TEXT_G,TEXT_B,18574);
+	displayText(-90,94,TEXT_R,TEXT_G,TEXT_B,"Lifes:");
+	displayPoints(-65,94,TEXT_R,TEXT_G,TEXT_B,10);
+	displayText(-40,94,TEXT_R,TEXT_G,TEXT_B,"Score:");
+	displayPoints(-15,94,TEXT_R,TEXT_G,TEXT_B,18574);
 	glutSwapBuffers();
 }
 
