@@ -63,10 +63,10 @@ void draw()
 	glLoadIdentity();
 	scene.setScene();
 	player.setPlayer();
-	displayText(-90,94,TEXT_R,TEXT_G,TEXT_B,"Lifes:");
-	displayPoints(-65,94,TEXT_R,TEXT_G,TEXT_B,10);
-	displayText(-40,94,TEXT_R,TEXT_G,TEXT_B,"Score:");
-	displayPoints(-15,94,TEXT_R,TEXT_G,TEXT_B,18574);
+	displayText(-50,92,TEXT_R,TEXT_G,TEXT_B,"Lifes:");
+	displayPoints(-25,92,TEXT_R,TEXT_G,TEXT_B,10);
+	displayText(0,92,TEXT_R,TEXT_G,TEXT_B,"Score:");
+	displayPoints(25,92,TEXT_R,TEXT_G,TEXT_B,18574);
 	glutSwapBuffers();
 }
 
